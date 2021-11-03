@@ -1,4 +1,3 @@
-
-// var linux = Object.create(User);
-
-// linux.name = "Linux"
+if (linux.hasOwnProperty("firstName")) {
+//             linux.getFirstName();
+// };
