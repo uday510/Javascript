@@ -3,7 +3,7 @@ class User {
         this.name = name;
         this.email = email;
     }
-    courseList = [];
+    #courseList = [];
 
 
     getInfo() {
@@ -11,14 +11,41 @@ class User {
     }
 
     enrollCourse(...name) {
-        this.courseList.push(...name);
+        this.#courseList.push(...name);
     }
     getCourseList() {
-        return this.courseList;
+        return this.#courseList;
+    }
+
+    login() {
+        return "You are now logged in";
     }
 
 }
 
-// let linux = User("Linux", "Linux@email.com")
+class SubAdmin extends User{
+    getAdminInfo() {
+        return "I am subAdmin";
+    }
+}
+
+
 
 module.exports = User;
+
+const rock = new User("rock", "rock@email.com");
+
+console.log(rock.getInfo());
+
+rock.enrollCourse("Angular");
+
+console.log(rock.getCourseList());
+
+// console.log(rock.courseList);
+
+
+
+const tom = new SubAdmin();
+console.log(tom.getAdminInfo());
+console.log(tom.login());
+console.log(tom.getInfo());
