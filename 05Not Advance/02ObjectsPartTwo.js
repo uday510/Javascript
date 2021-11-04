@@ -1,21 +1,14 @@
 var User = {
-    name: "",
+    name : "",
     getUserName : function() { 
-        console.log(`User name is : ${this.name}`);
+    console.log(`User name is : ${this.name}`);
+
     },
 };
 
-// var linux = Object.create(User);
-
-// linux.name = "Linux"
-// console.log(linux);
-
-
-// linux.getUserName();
-
-
-var sam = Object.create(User, {
-    name: {value: "sammer"}
+var linux = Object.create(User, {
+    name : {value: "Linux"},
 });
 
-sam.getUserName();
+
+linux.getUserName();
