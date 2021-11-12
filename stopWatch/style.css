@@ -8,3 +8,18 @@ body {
   text-align: center;
   color: aliceblue;
 }
+
+.count h2 {
+  font-size:50px
+}
+/* .description {
+  transition: 0.9s ease-in-out;
+} */
+
+.counterSS {
+  font-size: 40px;
+}
+
+.counterMM  {
+  font-size: 60px
+}
