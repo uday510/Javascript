@@ -2,17 +2,19 @@ const names = ["Youtube", "Facebook", "Twitter", "Instagram", "Amazon","Google"]
 
 
 // TODO : FOR OF IS FOR ARRAYS.
+
 for (const n of names) {
-    // console.log(n);
-
+    console.log(n);
+}    
+// TODO : FOR IN IS FOR OBJECTS. IN --> is for objects.
+console.log("----------------------->");
+const symbols = {
+yt: "youtube",
+ig: "Instagram",
+fb: "Facebook",
+lco: "LearnCodeOnline.in"
 }
-    const symbol = {
-        yt : "Youtube",
-        ig : "Instagram",
-        fb : "Facebook",
-    }
-// TODO : FOR OF IS FOR OBJECTS.
-
-for(const n in symbol) {
-    console.log(`Key is ${n} and value is: ${symbol[n]}`);
+for (const n in symbols) {
+    console.log(`
+    key is ${n} and value is: ${symbols[n]}`);
 }
