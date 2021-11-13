@@ -1,22 +1,18 @@
 var user = {
-
-    firstName : "Linux",
-    secondName : "Torvalds",
-    role : "Admin",
-    loginCount : 32,
-    facebookSignedIn : true
+    Model : 'MacBook Pro',
+    Processor : 'M1',
+    RAM : "512 GB",
+    SSD : "1 TB",
+    COLOR : "GREY/SILVER"
 };
 
+console.log(user.firstName);
+console.log(user["firstName"]);
+
 console.log(user.loginCount);
+user.loginCount = 44;
+console.table(user);
 
-console.log(user["loginCount"]);
-
-
-user.loginCount = 45;
-console.log(user.loginCount);
-
-// console.table(user);
-// console.log(user);
 
 
 

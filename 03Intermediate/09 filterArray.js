@@ -1,25 +1,20 @@
-var testArray = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+var testArray = [2, 4, 6, 3, 1, 5, 9, 8];
 
-// console.log(testArray.fill("h", 2, 5));
-// console.log(testArray.fill("empty"));
+// console.log(testArray.fill("empty", 0, 1));
 
-const myNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
-const result = myNumbers.filter( (number) => number >= 0 );
+const myNumber = [23, 24, 22, 12, 45, 55 ,28, 10];
 
+// const result = myNumber.filter((num) => num != 55);
 // console.log(result);
 
-var users = ["a", "b", "c", "d", "e", "f"];
+var users = ["a", "b", "c", "d", "e", "f", "g"];
 
-// console.log(users.slice(2, 5));
+// console.log(users.slice(0));
+// console.log(users.slice(0, 2));
 
-// console.log(users.slice(users.length - 1));
-
-users.splice(1, 3, "Hi", "Bye");
 console.log(users);
-
-
-
-
-
+// users.splice(1, 1, "HI");
+users.splice(1, 2, "HI", "BYE");
+console.log(users);
 

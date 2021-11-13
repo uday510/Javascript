@@ -6,8 +6,9 @@ console.log(this);
 var game = "basketball";
 
 function sayName() {
-    var uName = "Linux";
-        console.log(this);
+    var name = "uday";
+    console.log(this);
 }
-
 sayName();
+
+
