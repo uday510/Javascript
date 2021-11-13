@@ -2,19 +2,19 @@ const uid = "abc123";
 
 var firstName = "Uday";
 var lastName = "Teja";
-var email = "abc123@example.com";
-var password = "abc123";
-var confirmPassword = "abc123";
 var country = "India";
-var state = "Telangana";
-var city = "Hyderabad";
-var zipcode = "509217";
+var email = "abc123@gmail.com";
+var password = "1234567890";
+var confirmPassword = "1234567890";
+var courseCount = 0;
+var isLoggedInFromGoogle = false;
+
+// fullName = prompt("Enter your name: ");
 
 console.log(`
-    Name: ${firstName + " " + lastName}
-    Email: ${email}
-    Origin: ${country}
-    State: ${state}
-    City: ${city}
-    Zipcode: ${zipcode}          
+With Unique ID: ${uid}
+User is: ${firstName + " " + lastName}
+country: ${country}
+and his email is: ${email}
+and uses the password: ${password}
 `);

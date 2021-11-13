@@ -1,17 +1,17 @@
-
-var user = "admin"
+var user = "testprep";
 
 switch (user) {
     case "admin":
-        console.log("You get full access");        
+        console.log("You get full access");
         break;
-    
-    case "subAdmin":
-        console.log("get access to create/delete courses");        
+    case "subadmin":
+        console.log("gets access to create/delete courses");
         break;
-    
-    case "testPrep":
-        console.log("Consume to content");        
+    case "testprep":
+        console.log("gets access to create/delete courses");
+        break;
+    case "user":
+        console.log("gets access to consume the content");
         break;
     default:
         console.log("Trail user");

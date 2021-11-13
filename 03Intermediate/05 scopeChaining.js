@@ -1,15 +1,10 @@
-var uName = "linux";
+var name = "uday";
 
-console.log("Line Number 3: ", uName);
+console.log("Line number 1", name);
 
-function sayName () {
-    // var uName = "H";
-    console.log("Line Number 6: ", uName);
-    sayName2();
-    function sayName2 () {
-        // var uName = "T";
-    console.log("Line number 10: ", uName) ;
-    }
+function sayName() {
+    var name = "Mr H"
+    console.log("Line number 6", name);
 }
+sayName();
 
-sayName ();

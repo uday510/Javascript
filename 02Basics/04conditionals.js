@@ -1,20 +1,17 @@
-var temparature;
+var temperature;
+
+// TODO Go to google and get this
+
+temperature = 30;
 
 
-temparature = 39;
-
-
-
-if (temparature < 20) {
-    console.log("It's very cold outside");
+if (temperature < 20) {
+    console.log("it's very cold outside");
 }
-
-if (temparature < 30) {
+if (temperature < 30 ) {
     console.log("It's moderate outside");
 }
-
 else {
     console.log("It's really hot outside");
-
 }
 

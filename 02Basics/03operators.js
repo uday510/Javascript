@@ -1,18 +1,15 @@
-// D = (((L - S) / L) * 100 );
+// TODO Discount = ((listPrice - sellingPrice) / listingPrice) * 100;
 
 
-var sellingPrice =  199;
-var listPrice = 799;
+var sellingPrice = 199;
+var listingPrice = 799;
 
-var discountPercent = ((listPrice - sellingPrice) / listPrice ) * 100;
+var discountPercent = ( (listingPrice - sellingPrice) / listingPrice) * 100;
 
+var displayDiscountPercent = Math.round(discountPercent);
+console.log("Discount Percentage is: " + displayDiscountPercent + "% OFF");
 
-console.log("Discount percentage is : " + discountPercent );
-
-displayDiscountPercant = Math.round(discountPercent);
-
-console.log("Discount percentage is : " + displayDiscountPercant + "% off");
-
-var result = listPrice > sellingPrice;
+var result = listingPrice > sellingPrice;
 
 console.log(typeof result);
+

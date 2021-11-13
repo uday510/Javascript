@@ -1,4 +1,4 @@
-// TODO
+// TODO falsy values
 
 // Undefined
 // null
@@ -6,7 +6,7 @@
 // ''
 // NaN
 
-var user = "2";
+var user = 2;
 
 if (2 === user) {
     console.log("Condition is true");

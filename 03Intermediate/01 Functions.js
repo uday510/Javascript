@@ -1,14 +1,13 @@
 function sayHello(name) {
-    console.log("Hello World");
-    console.log(`Hello there, ${name}, How are you?`);
+    console.log(`Hello There, ${name}`);
 }
 
-// sayHello("uday");
-// sayHello("linux");
-
+// sayHello("user1");
+// sayHello("user2");
 
 function namastey() {
-    return "Hello in India."
+     return "Hello in India"
 }
 
 console.log(namastey());
+

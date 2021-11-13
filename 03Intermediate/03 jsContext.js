@@ -1,17 +1,15 @@
-
 // sayHello();
 
 // function sayHello() {
-//     console.log("HEllo");
+//     console.log("Hello");
 // }
 
 // if (2 === 2) {
-//     console.log("This is true.");
-// } 
-
+//     console.log("This is true");
+// }
 
 var myName = "uday";
-if (myName === window.myName) {
-    console.log("A true statement");
-}
 
+if (myName === myName) {
+    console.log("True statement");
+}

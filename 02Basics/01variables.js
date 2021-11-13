@@ -1,12 +1,18 @@
-var fullName = "uday";
+var fullName = "Uday Teja";
 
-var courseName = "React Native is Dope."
+var courseName = "React JS BootCamp";
 
 var isLoggedIn = true;
 
-var courseCount = 06;
+var loggedCount = 34;
 
-var paymentMode = "Credit Card";
+var paymentMode;
 
-console.log(courseCount);
-console.log("loggedCount\n");
+console.log(loggedCount);
+
+paymentMode = "Credit Card";
+
+
+
+
+
