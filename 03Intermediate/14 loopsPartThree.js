@@ -14,7 +14,7 @@ ig: "Instagram",
 fb: "Facebook",
 lco: "LearnCodeOnline.in"
 }
-for (const n in symbols) {
+for (const n of symbols) {
     console.log(`
     key is ${n} and value is: ${symbols[n]}`);
 }

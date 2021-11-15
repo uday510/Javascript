@@ -10,5 +10,6 @@
         "testprep",
         "uday",
         "zipcode"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
