@@ -1,0 +1,35 @@
+### Call stack maintains the order of execution of execution contexts.
+
+### Call stack another names:
+    0. call stack
+    1. Execution context stack
+    2. program stack
+    3. control stack
+    4. runtime stack
+    5. machine stack
+
+
+### Introduction to the JavaScript hoisting
+
+>>> When the JavaScript engine executes the JavaScript code, it creates the global execution context. 
+>>> The global execution context has two phases: creation and execution.
+>>> During the creation phase, the JavaScript engine moves the variable and 
+>>> function declarations to the top of your code. This feature is known as hoisting in JavaScript.
+
+>>> JavaScript hoisting occurs during the creation phase of the execution context that moves the variable and function declarations to the top of the script.
+>>> The JavaScript engine hoists the variables declared using the let keyword, but it doesn’t initialize them as the variables declared with the var keyword.
+>>> The JavaScript engine doesn’t hoist the function expressions and arrow functions
+
+>>> Closure :Function bundled with its lexical environment is known as a closure. Whenever function is returned, even if its vanished in execution context 
+>>> but still it remembers the reference it was pointing to. Its not just that function alone it returns but the entire closure
+
+### Uses of Closures:
+
+ => Module Design Pattern
+ => Currying
+ => Functions like once
+ => Memoize
+ => Maintaining state in async world
+ => setTimeouts
+ => Iterators
+    and many more...
