@@ -1,0 +1,105 @@
+         <div [ndPermissionActive]="{VIEW_LEADS: PORTAL_PERMISSIONS.CAMPAIGN.VIEW_LEADS_DOWNLOAD,
+            VIEW_CALL_LOGS: PORTAL_PERMISSIONS.CAMPAIGN.VIEW_CALL_LOGS_DOWNLOAD, 
+            UNIFIED_VIEW_LEADS: PORTAL_PERMISSIONS.CAMPAIGN_CATEGORIES.UNIFIED_VIEW_LEADS_DOWNLOAD,
+            UNIFIED_CALL_LOGS: PORTAL_PERMISSIONS.CAMPAIGN_CATEGORIES.UNIFIED_CALL_LOGS_DOWNLOAD,
+            DOWNLOAD_CONTACTS: PORTAL_PERMISSIONS.CONTACTS.DOWNLOAD_CONTACTS,
+            USER_REPORTS:PORTAL_PERMISSIONS.REPORTS.USER_REPORTS,
+            CAMPAIGN_REPORTS:PORTAL_PERMISSIONS.REPORTS.CAMPAIGN_REPORTS}">
+            <a mat-list-item id="nd-reports" [ngClass]="{'nd-active': isActiveReport}" joyrideStep="seventhStep"
+               title="Reports" text="Report of Campaign and Users."
+               (mouseenter)="viewCampaignList = false; viewReportList = true; viewUserChilds = false;"
+               (click)="viewReportList = true;">
+               <span class="material-icons">insert_chart_outlined</span>
+               <span class="mat-button-wrapper pl-7 mb-2" [@animateText]="linkText ? 'show' : 'hide'">Reports</span>
+               <span fxFlex class="nd-expand" [@animateText]="linkText ? 'show' : 'hide'">
+                  <span fxFlex></span>
+                  <mat-icon [@indicatorRotate]="'fixed'">
+                     keyboard_arrow_right
+                  </mat-icon>
+               </span>
+            </a>
+            <div class="nd-report-list" *ngIf="viewReportList" (mouseenter)="viewReportList = true;"
+               (mouseleave)="viewReportList = false;" [ngStyle]="{'left': linkText ? '200px' : '55px' }">
+               <mat-nav-list class="nd-mat-nav-list">
+                  <div class="nd-blank-item" (mouseenter)="viewUserChilds = false; viewCampaignChilds= false;"
+                     (mouseleave)="viewUserChilds = false; viewCampaignChilds= false;"></div>
+                  <div>
+                     <a [ndPermissionActive]="PORTAL_PERMISSIONS.REPORTS.USER_REPORTS" mat-list-item id="nd-user-report"
+                        [ngClass]="{'nd-active': isActiveReport}" joyrideStep="seventhStep" title="User Report"
+                        (mouseenter)="viewCampaignChilds= false; viewUserChilds = true;"
+                        (click)="viewReportList = true; viewUserChilds = true;">
+                        <span class="material-icons">recent_actors</span>
+                        <span class="mat-button-wrapper pl-7 mb-2">User</span>
+                        <span fxFlex class="nd-expand">
+                           <span fxFlex></span>
+                           <mat-icon [@indicatorRotate]="'fixed'">
+                              keyboard_arrow_right
+                           </mat-icon>
+                        </span>
+                     </a>
+                     <div class="nd-report-list nd-report-list-child-user" *ngIf="viewUserChilds"
+                        (mouseenter)="viewReportList = true;" (mouseleave)="viewUserChilds = false;"
+                        [ngStyle]="{'left': linkText ? '375px' : '230px' }">
+                        <mat-nav-list class="nd-mat-nav-list">
+                           <div class="nd-blank-item"> </div>
+                           <a mat-list-item routerLink="/reports/user-report" [routerLinkActive]="['nd-active']"
+                              title="Call report">
+                              <span class="material-icons">call</span>
+                              <span class="mat-button-wrapper pl-7">Call Report</span>
+                           </a>
+                           <a mat-list-item id="nd-login-report" routerLink="/reports/login-report"
+                              [routerLinkActive]="['nd-active']" title="Login report">
+                              <span class="material-icons">person</span>
+                              <span class="mat-button-wrapper pl-7">Login Report</span>
+                           </a>
+                           <div class="nd-blank-item"> </div>
+                        </mat-nav-list>
+                     </div>
+                  </div>
+                  <a [ndPermissionActive]="PORTAL_PERMISSIONS.REPORTS.CAMPAIGN_REPORTS" mat-list-item
+                     id="nd-campaign-report" (mouseenter)="viewUserChilds = false; viewCampaignChilds = true;"
+                     title="Campaign report">
+                     <span class="material-icons">insights</span>
+                     <span class="mat-button-wrapper pl-5">Campaign</span>
+                     <span fxFlex class="nd-expand">
+                        <span fxFlex></span>
+                        <mat-icon [@indicatorRotate]="'fixed'">
+                           keyboard_arrow_right
+                        </mat-icon>
+                     </span>
+                  </a>
+                  <div class="nd-report-list nd-report-list-child-campaign" *ngIf="viewCampaignChilds"
+                     (mouseenter)="viewReportList = true;" (mouseleave)="viewCampaignChilds = false;"
+                     [ngStyle]="{'left': linkText ? '375px' : '230px' }">
+                     <mat-nav-list class="nd-mat-nav-list">
+                        <div class="nd-blank-item"> </div>
+                        <a mat-list-item routerLink="/reports/campaign-report" [routerLinkActive]="['nd-active']"
+                           title="Campaign report">
+                           <span class="material-icons">campaign
+                           </span>
+                           <span class="mat-button-wrapper pl-7">Campaign Report</span>
+                        </a>
+                        <a mat-list-item id="nd-login-report" routerLink="/reports/campaign-lead-report"
+                           [routerLinkActive]="['nd-active']" title="Campaign lead report">
+                           <span class="material-icons">record_voice_over
+                           </span>
+                           <span class="mat-button-wrapper pl-7">Campaign Lead Report</span>
+                        </a>
+                        <div class="nd-blank-item"> </div>
+                     </mat-nav-list>
+                  </div>
+                  <div class="nd-blank-item" (mouseenter)="viewUserChilds = false; viewCampaignChilds= false;"
+                     (mouseleave)="viewUserChilds = false; viewCampaignChilds= false;"></div>
+                  <a [ndPermissionActive]="{VIEW_LEADS: PORTAL_PERMISSIONS.CAMPAIGN.VIEW_LEADS_DOWNLOAD,
+                      VIEW_CALL_LOGS: PORTAL_PERMISSIONS.CAMPAIGN.VIEW_CALL_LOGS_DOWNLOAD, 
+                      UNIFIED_VIEW_LEADS: PORTAL_PERMISSIONS.CAMPAIGN_CATEGORIES.UNIFIED_VIEW_LEADS_DOWNLOAD,
+                      UNIFIED_CALL_LOGS: PORTAL_PERMISSIONS.CAMPAIGN_CATEGORIES.UNIFIED_CALL_LOGS_DOWNLOAD,
+                      DOWNLOAD_CONTACTS: PORTAL_PERMISSIONS.CONTACTS.DOWNLOAD_CONTACTS
+                     }" mat-list-item id="nd-campaign-report" routerLink="/reports/download-async-report"
+                     (mouseenter)="viewUserChilds = false; viewCampaignChilds = false;" title="Download report">
+                     <span class="material-icons">upload_file</span>
+                     <span class="mat-button-wrapper pl-5">Download Report</span>
+                  </a>
+               </mat-nav-list>
+            </div>
+         </div>

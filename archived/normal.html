@@ -1,0 +1,31 @@
+<div>
+            <a mat-list-item id="nd-campaigns"
+               [ndPermissionActive]="mergePermissionObjects(PORTAL_PERMISSIONS.CAMPAIGN, PORTAL_PERMISSIONS.CAMPAIGN_CATEGORIES)"
+               [ngClass]="{'nd-active': isActiveCampaign}" joyrideStep="secondStep" title="Campaigns"
+               (clickOutside)="closeCampaignList();" text="You can create new campaign here."
+               (mouseenter)="viewReportList = false; viewCampaignList = true; viewUserChilds = false;"
+               (click)="viewCampaignList = true;">
+               <span class="material-icons">campaign</span>
+               <span class="mat-button-wrapper pl-7 mb-2" [@animateText]="linkText ? 'show' : 'hide'">Campaigns</span>
+               <span fxFlex class="nd-expand" [@animateText]="linkText ? 'show' : 'hide'">
+                  <span fxFlex></span>
+                  <mat-icon [@indicatorRotate]="'fixed'">
+                     keyboard_arrow_right
+                  </mat-icon>
+               </span>
+            </a>
+            <mat-nav-list class="nd-campaign-list" *ngIf="viewCampaignList" (mouseleave)="viewCampaignList = false;"
+               [ngStyle]="{'left': linkText ? '200px' : '55px' }">
+               <a mat-list-item id="nd-campaign-type" *ngFor="let val of campaignTypeOptions"
+                  routerLink="/campaign/{{val.value}}" [routerLinkActive]="['nd-active']">
+                  <span class="material-icons">{{val.icon}}</span>
+                  <span class="mat-button-wrapper pl-7">{{val.name}}</span>
+               </a>
+               <mat-divider></mat-divider>
+               <a [ndPermissionActive]="PORTAL_PERMISSIONS.CAMPAIGN" mat-list-item routerLink="/campaign/all"
+                  [routerLinkActive]="['nd-active']" title="View all campaigns">
+                  <span class="material-icons">view_comfy</span>
+                  <span class="mat-button-wrapper pl-7"><b>View all</b></span>
+               </a>
+            </mat-nav-list>
+         </div>
