@@ -103,3 +103,7 @@ const result = array.reduce((obj, item) => {
 }, value);
 
 console.log(result);
+
+function a() {
+    console.log(_)
+}
