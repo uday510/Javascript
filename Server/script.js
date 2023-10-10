@@ -16,8 +16,6 @@ async function onSubmit(event) {
         body: new FormData(form),
     };
 
-    // console.log("BODY", options.body)
-
     try {
         const response = await fetch(POST_API, options);
         const text = response.text();
