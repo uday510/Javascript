@@ -47,7 +47,6 @@ const scrollable = document.getElementById('scrollable');
 
 const button = document.querySelector('button');
 
-
 // button.addEventListener('dragstart', event => {
 //     console.log(event);
 // });

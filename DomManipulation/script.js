@@ -64,9 +64,7 @@
 
 // // listItems[0].remove();
 
-
 const listItems = document.querySelectorAll('li');
-
 
 console.log(window.innerWidth);
 console.log(window.innerHeight);
